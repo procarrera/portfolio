@@ -3,13 +3,9 @@ import axios from "axios";
 const api = axios.create({
     baseURL: "https://api.github.com",
     headers: {
-        Authorization: `Bearer ${process.env.GITHUB_KEY}`,
-        "Content-Type": "application/json"
-    },
-    withCredentials: true,
-    auth: {
-        username: `${process.env.GITHUB_USER}`,
-        password: `${process.env.GITHUB_PASSWORD}`
+        Authorization: `token ${process.env.GITHUB_KEY}`,
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.github.mercy-preview+json",
     },
     timeout: 10000,
     responseType: 'json',

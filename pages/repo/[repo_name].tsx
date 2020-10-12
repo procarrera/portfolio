@@ -26,21 +26,23 @@ export default function RepoPage({ repo, lang, sum }) {
           <title>{repo.name}</title>
         </Head>
         <h1>{repo.name}</h1>
-        <h3>{repo.description}</h3>
+        <h3 style={{marginBottom:"8px"}}>{repo.description}</h3>
         {lang.map((lang) => (
-          <h3>
+          <div  key={lang[1]} style={{ marginBottom: "8px", display:"flex", flexDirection:"row", alignItems: "center"}}>
             <div
               style={{
                 backgroundColor: "#f5f5",
+                borderRadius: "8px",
                 minWidth: "fit-content",
-                width: Math.round((lang[1] / sum) * 100) * 5,
+                width: Math.round((lang[1] / sum) * 100) * 3,
                 display: "inline-block",
+                padding:"4px 6px"
               }}
             >
-              {Math.round((lang[1] / sum) * 100)}%
+             <h3> {Math.round((lang[1] / sum) * 100)}% </h3>
             </div>
-            | {lang[0]}
-          </h3>
+            <h3>| {lang[0]}</h3>
+          </div>
         ))}
         <GlobalStyles />
       </>
@@ -69,6 +71,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const repoLanguages = await api.get(
     `/repos/procarrera/${repo_name}/languages`
   );
+
+  const repoTags = await api.get(
+    `/repos/procarrera/${repo_name}/topics`
+  )
 
   const lang: Array<[string, number]> = Object.entries(repoLanguages.data);
   const sum = lang.reduce((acc, [, value]) => acc + value, 0);

@@ -19,8 +19,7 @@ export const Header = styled.div`
 
     .avatar {
         border-radius: 50%;
-        width: 200px;
-
+        
         @media(max-width: 850px){
             width: 120px;
         }
@@ -65,7 +64,7 @@ export const Nav = styled.ul`
     flex: 1;
     color: #000;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 14px;
     padding-bottom: 25px;
 
@@ -73,33 +72,7 @@ export const Nav = styled.ul`
         display: grid;
         grid-template-columns: 1fr;
         gap: 14px;
-    }
-`;
-
-export const Link = styled.li`
-    padding: 12px;
-    border-radius: 8px;
-    background: #192734;
-    text-decoration: none;
-
-    hr {
-        opacity: 0.05;
-    }
-
-    .bold {
-        font-weight: bold;
-    }
-
-    a {
-        color: white;
-        font-size: 18px;
-        text-decoration: none;
-
-    }
-
-    p {
-        color: #FFF;
-        font-size: 16px;
-        margin: 8px 0;
+        width: 100%;
+        margin: 0 8px;
     }
 `;
