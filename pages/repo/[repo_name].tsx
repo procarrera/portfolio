@@ -49,7 +49,7 @@ export default function RepoPage({ repo, lang, sum }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const repoList = await api.get("/users/procarrera/repos?per_page=100");
+  const repoList = await api.get("/users/procarrera/repos?per_page=1000");
 
   const paths = repoList.data.map((repo) => {
     return { params: { repo_name: repo.name } };
@@ -67,7 +67,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const repoDetails = await api.get(`/repos/procarrera/${repo_name}`);
 
   const repoLanguages = await api.get(
-    `https://api.github.com/repos/procarrera/${repo_name}/languages`
+    `/repos/procarrera/${repo_name}/languages`
   );
 
   const lang: Array<[string, number]> = Object.entries(repoLanguages.data);
