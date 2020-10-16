@@ -1,49 +1,33 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import api from "../../../pages/api/github";
 
-import { Card, Container } from "./styles";
+import { Card, Header, Infos, Tags } from "./styles";
 
 const RepoCard = ({ repo }) => {
   console.log(repo.topics);
 
   return (
-    <Container>
+    <Link as={`/repo/${repo.name}`} href="/repo/[repo_name]" passHref>
       <Card>
-        <Link as={`/repo/${repo.name}`} href="/repo/[repo_name]" passHref>
-          <a className="bold">{repo.name}</a>
-        </Link>
-        <hr />
-        <p>{repo.description}</p>
-        <hr />
-        {repo.homepage ? (
-          <a id="homepage">@ {repo.homepage}</a>
-        ) : (
-          <p id="homepage"> &nbsp; </p>
-        )}
-        <hr />
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            marginTop: "15px",
-            alignItems: "end",
-            justifyContent: "left",
-          }}
-        >
+        <Header>
+          <h1>{repo.name.split("-").join(" ")}</h1>
+          <h2>{repo.stargazers_count>0?<img src="/img/star.svg" width="20px"/>:<h2></h2>}</h2>
+        </Header>
+        <Infos>
+          <p>{repo.description}</p>
+        </Infos>
+        <Tags>
           {repo.topics.map((tag) => (
             <img
+              className="tags"
               key={tag}
               src={`/img/${tag}.svg`}
               alt={tag}
-              height="25px"
-              style={{ paddingRight: "25px" }}
+              height="18px"
             />
           ))}
-        </div>
+        </Tags>
       </Card>
-    </Container>
+    </Link>
   );
 };
 

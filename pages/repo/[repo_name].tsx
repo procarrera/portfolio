@@ -41,7 +41,7 @@ export default function RepoPage({ repo, lang, sum }) {
             >
              <h3> {Math.round((lang[1] / sum) * 100)}% </h3>
             </div>
-            <h3>| {lang[0]}</h3>
+            <h3>[{lang[0]}]</h3>
           </div>
         ))}
         <GlobalStyles />

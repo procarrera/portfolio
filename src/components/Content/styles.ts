@@ -5,8 +5,21 @@ export const Container = styled.div`
     min-height: 100%;
     flex-grow:1;
     flex-direction: column;
-    background: #fff;
+    background: #F6F8FA;
     /* background:#15202B; */
+`;
+
+export const TwoColumns = styled.div`
+    display: flex;
+    flex-direction: row;
+
+    @media(max-width: 750px){
+        flex-direction: column;
+    }
+`;
+export const OneColumn = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 export const Header = styled.div`
@@ -19,6 +32,7 @@ export const Header = styled.div`
 
     .avatar {
         border-radius: 50%;
+        border: 6px solid #E9ECEF;
         
         @media(max-width: 850px){
             width: 120px;
@@ -60,19 +74,18 @@ export const Header = styled.div`
 export const Nav = styled.ul`
     align-self: center;
     list-style-type: none;
-    width: 90%;
+    width: 100%;
+    padding: 0 35px;
     flex: 1;
     color: #000;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 14px;
-    padding-bottom: 25px;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
 
     @media(max-width: 850px){
         display: grid;
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 8px;
         width: 100%;
-        margin: 0 8px;
     }
 `;
