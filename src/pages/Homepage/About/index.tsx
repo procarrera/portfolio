@@ -41,7 +41,7 @@ const About = () => {
               </span>
             </h1>
             <h1 className="timelineItem">
-              <img src="/img/reactLogo.svg" />
+              <img src="/img/reactjs-icon.svg" />
               <span>React has transformed the morden way of developing.</span>
             </h1>
             <h1 className="timelineItem">

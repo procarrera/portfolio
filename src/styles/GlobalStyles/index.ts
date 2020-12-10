@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle<Lock>`
 
     body {
         font-size: 12px;
-        /* overflow: ${({ locked }) => locked ? "hidden" : 'visible'}; */
+        overflow: ${({ locked }) => locked ? "hidden" : 'visible'};
         -webkit-font-smoothing: antialiased !important;
         ::-webkit-scrollbar {
         width: 11px;
