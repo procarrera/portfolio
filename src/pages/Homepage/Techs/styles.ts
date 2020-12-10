@@ -9,6 +9,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+    // MOBILE
+    @media(max-width: 425px) {
+        margin: 0 15px;
+    }
+
     color: #fff;
 
     .header {
@@ -20,6 +25,10 @@ export const Container = styled.div`
     align-items: center;
     padding-bottom: 35px;
     border-bottom: 1px solid #404448;
+
+    @media(max-width: 425px) {
+        margin: 0 15px;
+    }
 
         span {
             h1 {
@@ -43,8 +52,6 @@ export const Container = styled.div`
 
         .tech a {
             margin: 18px 0px;
-            text-decoration: none;
-            color: #fff;
             padding: 14px;
             display: flex;
             flex-direction: row;
@@ -52,6 +59,9 @@ export const Container = styled.div`
             align-items: center;
             border: 1px solid #404448;
             border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            text-align: justify;
             transition: 2s ease-in;
 
             >img {

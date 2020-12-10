@@ -12,6 +12,11 @@ export const Container = styled.div`
         border: 1px solid rgb(108, 99, 255, 0.8);
         cursor: pointer;
     }
+
+      // MOBILE
+    @media(max-width: 425px) {
+        margin: 15px;
+    }
 `;
 
 export const Card = styled.li`

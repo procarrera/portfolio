@@ -26,10 +26,16 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: column;
 
+    // MOBILE
+    @media(max-width: 425px) {
+        margin: 0 15px;
+    }
+
     color: #fff;
     font-size: 0.6rem;
 
     animation: ${focusIn} 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
  
  .header {
   margin: 0px 55px;
@@ -43,6 +49,11 @@ export const Container = styled.div<ContainerProps>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 65% 25%;
+
+  // MOBILE
+  @media(max-width: 425px) {
+    margin: 0 15px;
+  }
 
 span {
   h1 {

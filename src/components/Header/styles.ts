@@ -146,6 +146,11 @@ export const Wrapper = styled.div<ContainerProps>`
         justify-content: space-between;
         align-items: center;
 
+        // MOBILE
+        @media(max-width: 425px) {
+            padding: 0 15px;
+        }
+
         a {
                 color: #fff;
                 font-weight:bold;
@@ -179,9 +184,9 @@ export const Wrapper = styled.div<ContainerProps>`
         @media(max-width: 425px){
 
             ${({module})=> module !== 'home' && css`
-            button {
-                font-size: 1em;
-            }
+                button {
+                    font-size: 1em;
+                }
             `}
             
         }
