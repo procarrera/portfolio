@@ -5,11 +5,12 @@ export const Container = styled.div`
     background-position: center; Center the image
     background-repeat: no-repeat; Do not repeat the image
     background-size: cover; Resize the background image to cover the entire container */
-    background: rgba(1, 14, 19, 1);
+    background: rgba(10, 22, 27, 1);
     min-height: 100%;
     display: flex;
     justify-content: center;
 `;
+
 export const Wrapper = styled.div`
     padding-top: 80px;
     min-height: 100%;

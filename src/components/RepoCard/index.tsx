@@ -3,15 +3,13 @@ import Link from "next/link";
 import { Container, Card, Header, Infos, Tags } from "./styles";
 
 const RepoCard = ({ repo }) => {
-  console.log(repo.topics);
 
   return (
     <Container>
-      <Link as={`/repo/${repo.name}`} href="/repo/[repo_name]" passHref>
+      <a href={repo.html_url}>
         <Card>
           <Header>
             <h1>{repo.name.split("-").join(" ")}</h1>
-            
           </Header>
           <Infos>
             <p>{repo.description}</p>
@@ -28,7 +26,7 @@ const RepoCard = ({ repo }) => {
             ))}
           </Tags>
         </Card>
-      </Link>
+      </a>
     </Container>
   );
 };

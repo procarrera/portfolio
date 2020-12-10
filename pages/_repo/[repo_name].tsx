@@ -1,12 +1,12 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-
 import api from "../api/github";
 
 import DefaultErrorPage from "next/error";
-import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { GlobalStyles } from "../../src/styles/GlobalStyles";
+import GlobalStyles from "../../src/styles/GlobalStyles";
+
+import Repository from "../../src/pages/Repository";
 
 export default function RepoPage({ repo, lang, sum }) {
   const { isFallback } = useRouter();
@@ -16,35 +16,13 @@ export default function RepoPage({ repo, lang, sum }) {
   }
 
   if (repo.message === "Not Found") {
-    console.log("CAIU AQUI");
     console.log(repo);
     return <DefaultErrorPage statusCode={404} />;
   } else {
     return (
       <>
-        <Head>
-          <title>{repo.name}</title>
-        </Head>
-        <h1>{repo.name}</h1>
-        <h3 style={{marginBottom:"8px"}}>{repo.description}</h3>
-        {lang.map((lang) => (
-          <div  key={lang[1]} style={{ marginBottom: "8px", display:"flex", flexDirection:"row", alignItems: "center"}}>
-            <div
-              style={{
-                backgroundColor: "#f5f5",
-                borderRadius: "8px",
-                minWidth: "fit-content",
-                width: Math.round((lang[1] / sum) * 100) * 3,
-                display: "inline-block",
-                padding:"4px 6px"
-              }}
-            >
-             <h3> {Math.round((lang[1] / sum) * 100)}% </h3>
-            </div>
-            <h3>[{lang[0]}]</h3>
-          </div>
-        ))}
-        <GlobalStyles />
+        <Repository repo={repo} lang={lang} sum={sum} />
+        <GlobalStyles locked={false} />
       </>
     );
   }
@@ -72,9 +50,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     `/repos/procarrera/${repo_name}/languages`
   );
 
-  const repoTags = await api.get(
-    `/repos/procarrera/${repo_name}/topics`
-  )
+  const repoTags = await api.get(`/repos/procarrera/${repo_name}/topics`);
 
   const lang: Array<[string, number]> = Object.entries(repoLanguages.data);
   const sum = lang.reduce((acc, [, value]) => acc + value, 0);

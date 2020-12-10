@@ -44,7 +44,7 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     justify-content: center;
 
-    ${({ module }) => module === 'home'? css`
+    ${({ module }) => module === 'home' ? css`
     height: 100%;` :
         css`
     height: 80px;
@@ -56,9 +56,8 @@ export const Container = styled.div<ContainerProps>`
             return css`animation: ${slideIn} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`
         } else {
             if (module !== 'home')
-            return css`animation: ${slideOut} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`
+                return css`animation: ${slideOut} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`
         }
-
     }}          
 `;
 
@@ -155,6 +154,7 @@ export const Wrapper = styled.div`
             border-radius: 0.3em;
             transition: 0.2s;
             color: #fff;
+            transition: 0.2s ease-in;
 
             
         }

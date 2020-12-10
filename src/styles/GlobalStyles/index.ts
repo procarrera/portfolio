@@ -19,7 +19,8 @@ const GlobalStyles = createGlobalStyle<Lock>`
     }
 
     body {
-        overflow: ${({ locked }) => locked ? "hidden" : 'visible'};
+        font-size: 12px;
+        /* overflow: ${({ locked }) => locked ? "hidden" : 'visible'}; */
         -webkit-font-smoothing: antialiased !important;
         ::-webkit-scrollbar {
         width: 11px;
@@ -37,8 +38,11 @@ const GlobalStyles = createGlobalStyle<Lock>`
             }
 
     *, input, button{
-        font-size: 12px;
         font-family: 'Montserrat', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
     }
 `
 

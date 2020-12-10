@@ -1,9 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+   background: transparent;
    margin: 0 55px 15px 55px;
    border: 1px solid #404448;
    border-radius: 12px;
+   transition: 0.2s ease-in;
+
+   &:hover {
+        background: rgb(108, 99, 255, 0.8);
+        border: 1px solid rgb(108, 99, 255, 0.8);
+        cursor: pointer;
+    }
 `;
 
 export const Card = styled.li`
@@ -15,6 +23,7 @@ export const Card = styled.li`
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
+
 
     .bold {
         font-weight: bold;
@@ -33,14 +42,10 @@ export const Card = styled.li`
     .tags {
         padding-right: 15px;
     }
-
-    &:hover{
-        cursor: pointer;
-    }
 `;
 
 export const Header = styled.div`
-    padding: 10px 18px 10px 18px;
+    padding: 10px 18px 0px 18px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,9 +62,11 @@ export const Header = styled.div`
 `;
 
 export const Infos = styled.div`
-    padding: 6px;
+    padding: 0px 18px 10px 18px;
 
     p {
+        font-size: 14px;
+        line-height: 26px;
         color: #fff;
     }
 
