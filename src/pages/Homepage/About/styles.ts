@@ -27,6 +27,11 @@ export const Container = styled.div`
 
     animation: ${focusIn} 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
+    // MOBILE
+    @media(max-width: 425px) {
+        margin: 0 15px;
+    }
+
     > h1 {
         height: 105px;
         font-size: 32px;
@@ -43,6 +48,12 @@ export const Container = styled.div`
             font-weight: 400;
             color: #fff;
         }
+        
+        // MOBILE
+        @media(max-width: 425px) {
+            padding-bottom: 10px;
+            border-bottom: none;
+        }
     }
 
     .bio {
@@ -53,6 +64,11 @@ export const Container = styled.div`
         font-size: 18px;
         line-height: 28px;
         text-align: justify;
+
+        // MOBILE
+        @media(max-width: 425px) {
+            margin-top: 00px;
+        }
     }
 
     .history {
@@ -81,8 +97,13 @@ export const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content:space-between;
-
         flex: 1;
+
+        // MOBILE
+        @media(max-width: 425px) {
+            flex-direction: column;
+            margin: 0px;
+        }
 
         .timeline {
             display: flex;
@@ -176,6 +197,11 @@ export const Container = styled.div`
         align-items: flex-end;
         font-size: 16px;
 
+        // MOBILE
+        @media(max-width: 425px) {
+            align-items: center;
+        }
+
         > .techs {
             padding: 14px;
             border-radius: 25px;
@@ -184,10 +210,18 @@ export const Container = styled.div`
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
+
+            // MOBILE
+            @media(max-width: 425px) {
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+            }
         }
 
         p {
             letter-spacing: 4px;
+            font-weight: bold;
         }
 
         img {
@@ -195,22 +229,39 @@ export const Container = styled.div`
             margin: 8px 0;
         }
 
-        > .softskills {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            > span {
-            margin: 8px 0;
-            padding: 6px;
-            border: 1px solid #888;
-            border-radius: 6px;
-        }
-        }
-        
-        
-    }
-    }
+            > .softskills {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                > span {
+                margin: 8px 0;
+                padding: 6px;
+                border: 1px solid #888;
+                border-radius: 6px;
+            }
+             // MOBILE
+             @media(max-width: 425px) {
+                width: 100%;
+                margin: 25px 0px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-start;
+                border-radius: 25px;
+                border: 1px solid #404448;
+                padding: 14px;
 
-    
+                p:first-child {
+                    flex-basis: 100%;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+            }
+        }
+        
+        
+    }
+}
+   
 `;
