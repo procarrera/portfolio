@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ pageName }) => {
   }
   return (
     <Container fullHeight={minHeader} module={module}>
-      <Wrapper>
+      <Wrapper fullHeight={minHeader} module={module}>
         {module === "home" && (
           <div className="header">
             <img src="/img/avatar.jpeg" alt="avatar" />

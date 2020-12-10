@@ -61,7 +61,7 @@ export const Container = styled.div<ContainerProps>`
     }}          
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<ContainerProps>`
     flex: 1;
     max-width: 680px;
     display: flex;
@@ -76,14 +76,23 @@ export const Wrapper = styled.div`
         justify-content: space-around;
         align-items: center;
         margin-bottom: 45px;
-
+       
         img {
             width: 220px;
             border-radius: 50%;
         }
+        //Mobiles
+        @media(max-width: 425px){
+            flex-direction: column;
+
+            img {
+                width: 180px;
+                margin-bottom: 25px;
+            }
+        }
 
         .animation {
-            max-width: 450px;
+            max-width: 425px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -131,6 +140,7 @@ export const Wrapper = styled.div`
 
     nav {
         width: 100%;
+        max-width: 100vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -164,6 +174,18 @@ export const Wrapper = styled.div`
             background: rgba(196,196,196,0.1);
             cursor: pointer;
         }
+
+        // MOBILE
+        @media(max-width: 425px){
+
+            ${({module})=> module !== 'home' && css`
+            button {
+                font-size: 1em;
+            }
+            `}
+            
+        }
+
     }
 
     div.moduleDocker {
