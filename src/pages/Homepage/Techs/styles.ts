@@ -1,4 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const focusIn = keyframes`
+0%, 50%{
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
     min-height: 100%;
@@ -8,6 +21,8 @@ export const Container = styled.div`
     padding-top: 95px;
     display: flex;
     flex-direction: column;
+
+    animation: ${focusIn} 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
     // MOBILE
     @media(max-width: 425px) {
@@ -90,7 +105,8 @@ export const Container = styled.div`
         }
 
         a:hover {
-            background: linear-gradient(180deg, #007cf0, #00dfd8);
+            border: 1px solid transparent;
+            background: linear-gradient(180deg, rgba(0,124,240,0.4), rgba(0,223,216,0.4));
         }
     }
 `;

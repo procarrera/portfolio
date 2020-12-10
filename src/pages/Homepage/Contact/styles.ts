@@ -1,4 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const focusIn = keyframes`
+0%, 50%{
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+`;
+
 
 export const Container = styled.div`
     width: 100%;
@@ -13,6 +27,8 @@ export const Container = styled.div`
     font-size: 26px;
     letter-spacing: 4px;
     color: #fff;
+
+    animation: ${focusIn} 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
     p:first-child {
         font-weight: bold;

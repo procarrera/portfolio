@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
  width: 100%;
- background: rgb(6, 33 , 50, 0.5);
+ background: rgb(33, 54, 67, 1);
 
  display: flex;
  flex-direction: column;
@@ -14,6 +14,7 @@ export const Container = styled.div`
  letter-spacing: 4px;
 
  p {
+     color: #fff;
      text-align: center;
      padding: 18px 0px;
  }
@@ -28,6 +29,8 @@ export const Container = styled.div`
     a {
         padding: 0px 18px;
         > img {
+        opacity: 0.7;
+        filter: brightness(0) invert(1);
         height: 40px;
         }
     }

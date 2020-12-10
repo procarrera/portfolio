@@ -15,8 +15,7 @@ const Homepage = ({ sortedList, page }: any) => {
         <span>
           <h1>Here are my projects :)</h1>
           <h3>
-            Some of them are for clients, some were for my studies, experiments,
-            etc.
+            jobs, studies, experiments and collaborations.
           </h3>
         </span>
       </div>

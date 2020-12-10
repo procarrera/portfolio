@@ -60,7 +60,6 @@ export const Container = styled.div`
         margin-top: 30px;
         padding: 14px;
         border-radius: 25px;
-        border: 1px solid #404448;
         font-size: 18px;
         line-height: 28px;
         text-align: justify;
@@ -75,7 +74,6 @@ export const Container = styled.div`
         margin-top: 14px;
         padding: 14px;
         border-radius: 25px;
-        border: 1px solid #404448;
         font-size: 18px;
         line-height: 28px;
         text-align: justify;
@@ -114,7 +112,7 @@ export const Container = styled.div`
                 position: relative;
                 padding-right: 1px;
                 margin-right: 16px;
-                background: linear-gradient(45deg, rgba(0, 0 ,0 ,0) 0%, rgba(255,255,255) 20% 100%);
+                background: linear-gradient(0deg, rgba(0, 0 ,0 ,0) 0%, rgba(255,255,255) 20% 100% );
 
                 > img:nth-child(1) {
                     position: absolute;
