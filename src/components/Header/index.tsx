@@ -46,9 +46,22 @@ const Header: React.FC<HeaderProps> = ({ pageName }) => {
           )}
           <button onClick={() => handleCollapse("about")}>About</button>
           <button onClick={() => handleCollapse("projects")}>Projects</button>
-          <button onClick={() => handleCollapse("techs")}>Technologies</button>
+          <button onClick={() => handleCollapse("techs")}>Technology</button>
           <button onClick={() => handleCollapse("contact")}>Contact</button>
         </nav>
+        {module === "home" && (
+          <div className="social">
+            <a href="https://github.com/procarrera">
+              <img src="/img/github.svg" alt="" />
+            </a>
+            <a href="https://twitter.com/procarrera_">
+              <img src="/img/twitter.svg" alt="" />
+            </a>
+            <a href="https://wa.me/5521986816996">
+              <img src="/img/whatsapp.svg" alt="" />
+            </a>
+          </div>
+        )}
       </Wrapper>
     </Container>
   );

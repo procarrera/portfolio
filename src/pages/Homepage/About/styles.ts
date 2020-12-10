@@ -28,12 +28,11 @@ export const Container = styled.div`
     animation: ${focusIn} 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
     > h1 {
-        height: 205px;
+        height: 105px;
         font-size: 32px;
         color: #007cf0;
         padding-bottom: 30px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        background: red;
 
         > img {
             height: 45px;

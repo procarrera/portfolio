@@ -6,7 +6,7 @@ interface ContainerProps {
 }
 
 const slideIn = keyframes`
-0% {
+0%, 33% {
         height: 80px;
     }
 100% {
@@ -53,10 +53,10 @@ export const Container = styled.div<ContainerProps>`
 
     ${({ fullHeight, module }) => {
         if (fullHeight && module !== 'home') {
-            return css`animation: ${slideIn} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`
+            return css`animation: ${slideIn} 0.8s  cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`
         } else {
             if (module !== 'home')
-                return css`animation: ${slideOut} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`
+                return css`animation: ${slideOut} 0.8s  cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`
         }
     }}          
 `;
@@ -169,5 +169,17 @@ export const Wrapper = styled.div`
     div.moduleDocker {
         padding-top: 45px;
     }
+
+    .social {
+        padding-top: 120px;
+
+    a {
+        padding: 0px 40px;
+        > img {
+        filter: invert(100%);
+        height: 50px;
+        }
+    }
+ }
 `;
 
