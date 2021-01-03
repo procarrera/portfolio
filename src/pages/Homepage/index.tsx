@@ -19,6 +19,7 @@ const Homepage = ({ repoList, shouldLock }: any) => {
   function callback(page: string) {
     shouldLock(page);
     setModule(page);
+    window.scrollTo(0, 0)
     console.log("callback: ", page);
   }
 

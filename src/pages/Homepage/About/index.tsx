@@ -19,8 +19,8 @@ const About = () => {
       <div className="history">
         Borned in 1986, Brazil. I could follow the development of techonology
         from the very begining. Creative mind, dedication and friendship have
-        led me to study a lot by my own and today I work as freelancer with web
-        development and mobile application.
+        led me to study a lot by myself and today I work as fullstack developer, for web
+        and mobile application.
       </div>
       <div className="breaker">Learning &amp; Progression</div>
       <div className="main">

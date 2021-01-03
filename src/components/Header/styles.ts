@@ -108,6 +108,7 @@ export const Wrapper = styled.div<ContainerProps>`
                 
 
                 span {
+                    margin: 8px 0;
                     font-size: 35px;
                     font-weight: bold;
                     line-height: 35px;

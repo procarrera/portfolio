@@ -34,7 +34,7 @@ export default function Home({ repoList }) {
   return (
     <>
       <Head>
-        <title>Meu Portfolio</title>
+        <title>Pedro Carrera - Developer</title>
       </Head>
       <GlobalStyle locked={locked} />
       <Homepage repoList={repoList} shouldLock={shouldLock} />

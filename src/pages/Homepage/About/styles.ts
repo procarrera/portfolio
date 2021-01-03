@@ -36,8 +36,7 @@ export const Container = styled.div`
         height: 105px;
         font-size: 32px;
         color: #007cf0;
-        padding-bottom: 30px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0 14px;
 
         > img {
             height: 45px;
@@ -57,8 +56,7 @@ export const Container = styled.div`
     }
 
     .bio {
-        margin-top: 30px;
-        padding: 14px;
+        padding: 0px 14px;
         border-radius: 25px;
         font-size: 18px;
         line-height: 28px;
