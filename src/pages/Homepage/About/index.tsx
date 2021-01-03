@@ -13,7 +13,7 @@ const About = () => {
         </span>
       </h1>
       <div className="bio">
-        I'm <b>Frontend &amp; Fullstack developer</b>, with a guided mind to
+        I'm <b>Fullstack developer</b> with a guided mind to
         create the best experience for the end user.
       </div>
       <div className="history">
