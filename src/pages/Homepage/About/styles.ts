@@ -80,7 +80,7 @@ export const Container = styled.div`
     .breaker {
         text-align: center;
         font-weight: bold;
-        font-size: 28px;
+        font-size: 24px;
         margin-top: 60px;
         border-radius: 25px;
         padding: 4px;
@@ -126,31 +126,31 @@ export const Container = styled.div`
                 }
                 > img:nth-child(3) {
                     position: absolute;
-                    top: 26.5%;
+                    top: 27%;
                     left: -8px;
                     height: 16px;
                 }
                 > img:nth-child(4) {
                     position: absolute;
-                    top: 41%;
+                    top: 42%;
                     left: -8px;
                     height: 16px;
                 }
                 > img:nth-child(5) {
                     position: absolute;
-                    top: 55.5%;
+                    top: 57%;
                     left: -8px;
                     height: 16px;
                 }
                 > img:nth-child(6) {
                     position: absolute;
-                    top: 70%;
+                    top: 71%;
                     left: -8px;
                     height: 16px;
                 }
                 > img:nth-child(7) {
                     position: absolute;
-                    top: 85%;
+                    top: 86%;
                     left: -8px;
                     height: 16px;
                 }
@@ -162,18 +162,22 @@ export const Container = styled.div`
                 flex-direction: column;
                 justify-content: space-around;
 
-            h1.timelineItem:nth-child(1) {
+            a.timelineItem:nth-child(1) {
                 margin-top: 45px;
             }
 
-            h1.timelineItem:last-child {
-                padding-bottom: 45px;
+            a.timelineItem:last-child {
+                margin-bottom: 80px;
             }
 
-            h1.timelineItem {
+            a.timelineItem {
+                font-size: 20px;
+                line-height: 140%;
+                font-weight: 400;
+                color: #ffffff;
                 opacity: 90%;
                 margin-bottom: 60px;
-                padding: 14px 0;
+                padding: 14px 6px;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -187,7 +191,7 @@ export const Container = styled.div`
                 transition: 0.2s ease-in;
                 }
 
-                h1.timelineItem:hover {
+                a.timelineItem:hover {
                 opacity: 100%;
                 border-radius: 25px;
                 box-shadow: 0px 0px 0px 1px #404448;

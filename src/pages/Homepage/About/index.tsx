@@ -35,15 +35,15 @@ const About = () => {
             <img src="/img/ellipse.png" alt="" />
           </div>
           <div>
-            <h1 className="timelineItem">
+            <a className="timelineItem" href="https://nextjs.org/">
               <img src="/img/nextLogo.svg" />
               <span>Currently using NextJS, the most powerful tool today.</span>
-            </h1>
-            <h1 className="timelineItem">
+            </a>
+            <a className="timelineItem" href="https://reactjs.org/">
               <img src="/img/reactjs-icon.svg" />
               <span>React has transformed my concept of development.</span>
-            </h1>
-            <h1 className="timelineItem">
+            </a>
+            <a className="timelineItem" href="https://www.typescriptlang.org">
               <img
                 src="/img/java-script-logo.svg"
                 style={{
@@ -53,24 +53,24 @@ const About = () => {
                 }}
               />
               <span>Javascript and Typescript, clean code for everyone.</span>
-            </h1>
-            <h1 className="timelineItem">
+            </a>
+            <a className="timelineItem" href="https://en.wikipedia.org/wiki/User_experience">
               <img src="/img/website-ui-ux.svg" />
               <span>
                 UX/UI <br />
                 Usability applied to Mobile and Web
               </span>
-            </h1>
-            <h1 className="timelineItem">
+            </a>
+            <a className="timelineItem" href="https://nodejs.org/en">
               <img src="/img/nodejs.svg" />
               <span>I usually use NodeJS to develop my Backends.</span>
-            </h1>
-            <h1 className="timelineItem">
+            </a>
+            <a className="timelineItem" href="">
               <img src="/img/code.svg" />
               <span>
                 I've been studying different code languages in the past years.
               </span>
-            </h1>
+            </a>
           </div>
         </div>
 
@@ -86,13 +86,15 @@ const About = () => {
           <div className="softskills">
             <p>Soft Skills:</p>
             <span>Dedicated</span>
+            <span>Good listener</span>
             <span>Curious</span>
             <span>Creative</span>
             <span>Analytical</span>
             <span>Strategist</span>
-            <span>Enthusiastic</span>
+            <span>Teamwork</span>
             <span>Positive</span>
-            <span>Intuitive</span>
+            <span>Collaboration</span>
+            <span>Confidence</span>
             <span>Happy</span>
           </div>
         </div>
