@@ -13,14 +13,14 @@ const About = () => {
         </span>
       </h1>
       <div className="bio">
-        I'm <b>Fullstack developer</b> with a guided mind to
-        create the best experience for the end user.
+        I'm <b>Fullstack developer</b> with a guided mind to create the best
+        experience for everyone.
       </div>
       <div className="history">
         Borned in 1986, Brazil. I could follow the development of techonology
         from the very begining. Creative mind, dedication and friendship have
-        led me to study a lot by myself and today I work as fullstack developer, for web
-        and mobile application.
+        led me to study a lot by myself and today I work as fullstack developer,
+        for web and mobile application.
       </div>
       <div className="breaker">Learning &amp; Progression</div>
       <div className="main">
@@ -32,17 +32,16 @@ const About = () => {
             <img src="/img/ellipse.png" alt="" />
             <img src="/img/ellipse.png" alt="" />
             <img src="/img/ellipse.png" alt="" />
+            <img src="/img/ellipse.png" alt="" />
           </div>
           <div>
             <h1 className="timelineItem">
               <img src="/img/nextLogo.svg" />
-              <span>
-                Introduced to the NextJS, the most powerful tool today.
-              </span>
+              <span>Currently using NextJS, the most powerful tool today.</span>
             </h1>
             <h1 className="timelineItem">
               <img src="/img/reactjs-icon.svg" />
-              <span>React has transformed the morden way of developing.</span>
+              <span>React has transformed my concept of development.</span>
             </h1>
             <h1 className="timelineItem">
               <img
@@ -53,7 +52,7 @@ const About = () => {
                   padding: "2px",
                 }}
               />
-              <span>JavaScript and Typescript are a powerful choice.</span>
+              <span>Javascript and Typescript, clean code for everyone.</span>
             </h1>
             <h1 className="timelineItem">
               <img src="/img/website-ui-ux.svg" />

@@ -120,31 +120,37 @@ export const Container = styled.div`
                 }
                 > img:nth-child(2) {
                     position: absolute;
-                    top: 8%;
+                    top: 11.5%;
                     left: -8px;
                     height: 16px;
                 }
                 > img:nth-child(3) {
                     position: absolute;
-                    top: 24%;
+                    top: 26.5%;
                     left: -8px;
                     height: 16px;
                 }
                 > img:nth-child(4) {
                     position: absolute;
-                    top: 39.5%;
+                    top: 41%;
                     left: -8px;
                     height: 16px;
                 }
                 > img:nth-child(5) {
                     position: absolute;
-                    top: 55%;
+                    top: 55.5%;
                     left: -8px;
                     height: 16px;
                 }
                 > img:nth-child(6) {
                     position: absolute;
-                    top: 71%;
+                    top: 70%;
+                    left: -8px;
+                    height: 16px;
+                }
+                > img:nth-child(7) {
+                    position: absolute;
+                    top: 85%;
                     left: -8px;
                     height: 16px;
                 }
@@ -157,6 +163,11 @@ export const Container = styled.div`
                 justify-content: space-around;
 
             h1.timelineItem:nth-child(1) {
+                margin-top: 45px;
+            }
+
+            h1.timelineItem:last-child {
+                padding-bottom: 45px;
             }
 
             h1.timelineItem {
