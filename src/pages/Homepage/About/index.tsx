@@ -14,7 +14,7 @@ const About = () => {
       </h1>
       <div className="bio">
         I'm <b>Fullstack developer</b> with a guided mind to create the best
-        experience for everyone.
+        experiences.
       </div>
       <div className="history">
         Borned in 1986, Brazil. I could follow the development of techonology

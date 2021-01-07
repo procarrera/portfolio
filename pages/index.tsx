@@ -12,6 +12,7 @@ import Footer from "../src/components/Footer"
 export const getStaticProps: GetStaticProps = async () => {
   const repoList = await api.get("/users/procarrera/repos?per_page=1000");
   console.log('Called API on getStaticProps')
+  const sortedRepoList = repoList.data.slice().sort((a, b) => b.updated_at - a.updated_at)
   return {
     props: {
       repoList: repoList.data,
