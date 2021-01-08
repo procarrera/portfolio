@@ -11,17 +11,14 @@ const Header: React.FC<HeaderProps> = ({ pageName }) => {
   const [minHeader, setMinHeader] = useState(true);
 
   useEffect(() => {
-    console.log("Effect minHeader: ", minHeader);
   }, [minHeader]);
 
   function handleCollapse(page: string) {
     if (page !== module) {
       pageName(page);
       setModule(page);
-      console.log(minHeader);
       if (module === "home" || page === "home") {
         setMinHeader(!minHeader);
-        console.log("minHeader: ", minHeader);
       }
     }
   }

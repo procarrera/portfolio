@@ -16,7 +16,6 @@ export default function RepoPage({ repo, lang, sum }) {
   }
 
   if (repo.message === "Not Found") {
-    console.log(repo);
     return <DefaultErrorPage statusCode={404} />;
   } else {
     return (
@@ -54,10 +53,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const lang: Array<[string, number]> = Object.entries(repoLanguages.data);
   const sum = lang.reduce((acc, [, value]) => acc + value, 0);
-  console.log(sum);
 
   if (repoDetails.data.message) {
-    console.log("Data Message ", repoDetails.data);
     return {
       props: {
         repo: repoDetails.data,

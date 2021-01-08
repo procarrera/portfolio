@@ -4,7 +4,6 @@ import { Container } from "./styles";
 
 const Techs = ({ page }: any) => {
   useEffect(() => {
-    console.log("Projects PAGE: ", page);
   }, [page]);
 
   return (

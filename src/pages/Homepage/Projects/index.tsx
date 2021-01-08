@@ -6,7 +6,6 @@ import { Container } from "./styles";
 
 const Homepage = ({ sortedList, page }: any) => {
   useEffect(() => {
-    console.log("Projects PAGE: ", page);
   }, [page]);
 
   return (

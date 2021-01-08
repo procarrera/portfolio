@@ -10,22 +10,16 @@ import Contact from "./Contact";
 import { Container } from "./styles";
 
 const Homepage = ({ repoList, shouldLock }: any) => {
-  console.log(repoList);
   const [module, setModule] = useState("home");
 
   const sortedList = repoList.sort((a, b) => {
-
     return b.topics.length - a.topics.length;
-
-    console.log(b.homepage - a.homepage);
-    return b.homepage.length - a.homepage.length;
   });
 
   function callback(page: string) {
     shouldLock(page);
     setModule(page);
     window.scrollTo(0, 0);
-    console.log("callback: ", page);
   }
 
   return (
