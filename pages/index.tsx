@@ -7,15 +7,16 @@ import api from "./api/github";
 import GlobalStyle from "../src/styles/GlobalStyles";
 
 import Homepage from "../src/pages/Homepage";
-import Footer from "../src/components/Footer"
+import Footer from "../src/components/Footer";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const repoList = await api.get("/users/procarrera/repos?per_page=1000");
-  console.log('Called API on getStaticProps')
-  const sortedRepoList = repoList.data.slice().sort((a, b) => b.updated_at - a.updated_at)
+  const response = await api.get(
+    "/users/procarrera/repos?per_page=1000&sort=update"
+  );
+
   return {
     props: {
-      repoList: repoList.data,
+      repoList: response.data,
     },
     revalidate: 1,
   };
