@@ -10,6 +10,7 @@ import Contact from "./Contact";
 import { Container } from "./styles";
 
 const Homepage = ({ repoList, shouldLock }: any) => {
+
   const [module, setModule] = useState("home");
 
   const sortedList = repoList.sort((a, b) => {

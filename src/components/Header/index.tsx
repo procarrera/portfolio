@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 
 import { Container, Wrapper } from "./styles";
+
+const CroctComponent = dynamic(() => import("../CroctComponent"), {
+  ssr: false,
+});
 
 interface HeaderProps {
   pageName: any;
@@ -10,8 +15,7 @@ const Header: React.FC<HeaderProps> = ({ pageName }) => {
   const [module, setModule] = useState("home");
   const [minHeader, setMinHeader] = useState(true);
 
-  useEffect(() => {
-  }, [minHeader]);
+  useEffect(() => {}, [minHeader]);
 
   function handleCollapse(page: string) {
     if (page !== module) {
@@ -47,16 +51,19 @@ const Header: React.FC<HeaderProps> = ({ pageName }) => {
           <button onClick={() => handleCollapse("contact")}>Contact</button>
         </nav>
         {module === "home" && (
-          <div className="social">
-            <a href="https://github.com/procarrera">
-              <img src="/img/github.svg" alt="" />
-            </a>
-            <a href="https://twitter.com/procarrera_">
-              <img src="/img/twitter.svg" alt="" />
-            </a>
-            <a href="https://wa.me/5521986816996">
-              <img src="/img/whatsapp.svg" alt="" />
-            </a>
+          <div className="sub-navigation">
+            <CroctComponent setPage={handleCollapse} />
+            <div className="social">
+              <a href="https://github.com/procarrera">
+                <img src="/img/github.svg" alt="" />
+              </a>
+              <a href="https://twitter.com/procarrera_">
+                <img src="/img/twitter.svg" alt="" />
+              </a>
+              <a href="https://wa.me/5521986816996">
+                <img src="/img/whatsapp.svg" alt="" />
+              </a>
+            </div>
           </div>
         )}
       </Wrapper>

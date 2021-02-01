@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@croct/plug": "^0.6.2",
+    "@croct/sdk": "^0.4.0",
     "axios": "^0.20.0",
     "next": "9.5.3",
     "react": "16.13.1",

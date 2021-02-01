@@ -44,6 +44,11 @@ const GlobalStyles = createGlobalStyle<Lock>`
     a {
         text-decoration: none;
     }
+
+    .hidden {
+        visibility: hidden;
+        display: none;
+    }
 `
 
 export default GlobalStyles;

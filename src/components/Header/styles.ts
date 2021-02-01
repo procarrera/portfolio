@@ -38,14 +38,17 @@ export const Container = styled.div<ContainerProps>`
     z-index: 999;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.2);
     color: #ffffff;
-    backdrop-filter: saturate(180%) blur(12px);
+    @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: saturate(180%) blur(12px);
+    }
+    background: rgba(0, 0, 0);
     display: flex;
     justify-content: center;
 
     ${({ module }) => module === 'home' ? css`
-    height: 100%;` :
+    min-height: 100vh;` :
         css`
     height: 80px;
     padding: 35px 0;
@@ -149,7 +152,7 @@ export const Wrapper = styled.div<ContainerProps>`
 
         // MOBILE
         @media(max-width: 425px) {
-            padding: 0 15px;
+            padding: 0px 8px;
         }
 
         a {
@@ -160,7 +163,7 @@ export const Wrapper = styled.div<ContainerProps>`
 
         button {
             color: #fff;
-            font-size: 1.4em;
+            font-size: 1.35em;
             font-weight:bold;
             text-decoration: none;
             background: transparent;
@@ -184,8 +187,9 @@ export const Wrapper = styled.div<ContainerProps>`
         // MOBILE
         @media(max-width: 425px){
 
-            ${({module})=> module !== 'home' && css`
+            ${({ module }) => module !== 'home' && css`
                 button {
+                    padding: 1em 1em;
                     font-size: 1em;
                 }
             `}
@@ -198,14 +202,28 @@ export const Wrapper = styled.div<ContainerProps>`
         padding-top: 45px;
     }
 
+    .sub-navigation {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media(max-width: 425px){
+        .social {
+            visibility: hidden;
+            display: none;
+        }
+    }
+
     .social {
-        padding-top: 120px;
+        text-align: center;
+        padding-top: 60px;
 
     a {
         padding: 0px 40px;
         > img {
         filter: invert(100%);
-        height: 50px;
+        height: 45px;
         }
     }
  }

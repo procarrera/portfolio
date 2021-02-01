@@ -32,11 +32,12 @@ export const Container = styled.div`
 
     p:first-child {
         font-weight: bold;
+        line-height: 160%;
     }
 
     p {
         text-align: center;
-        padding: 18px 0px;
+        padding: 35px 0px;
     }
 
     p:last-child {
@@ -50,8 +51,15 @@ export const Container = styled.div`
         a {
             padding: 0px 18px;
             > img {
-            filter: brightness(0) invert(1);
-            height: 60px;
+                transition: ease-in .3s;
+                opacity: .8;
+                filter: brightness(0) invert(1);
+                height: 50px;
+            }
+        }
+        a:hover {
+            > img {
+                opacity: 1;
             }
         }
     }

@@ -5,7 +5,8 @@ import { Container } from './styles';
 const Contact: React.FC = () => {
   return (
     <Container>
-      <p>Nice to see you here!</p>
+      <p>Nice to see you here!<br/>
+      I will love to hear from you :)</p>
       <p>procarrera@gmail.com</p>
       <div className="social">
         <a href="https://github.com/procarrera">
@@ -18,8 +19,8 @@ const Contact: React.FC = () => {
           <img src="/img/whatsapp.svg" alt="" />
         </a>
       </div>
-      <p style={{ marginTop: "38px"}}>
-        Developed with love
+      <p style={{lineHeight: "140%", fontSize: "20px", marginTop: "38px"}}>
+        Developed by
         <br />
         <b>Pedro Carrera</b>
       </p>

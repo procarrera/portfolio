@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
@@ -32,6 +32,13 @@ export default function Home({ repoList }) {
       setLocked(false);
     }
   }
+
+  // useEffect(() => {
+  //   console.log("useEffect");
+  //   croct
+  //     .evaluate(`user is returning`)
+  //     .then((returning) => alert(returning ? "Welcome back!" : "Welcome!"));
+  // }, []);
 
   return (
     <>

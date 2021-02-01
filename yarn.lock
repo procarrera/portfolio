@@ -1014,6 +1014,21 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@croct/plug@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@croct/plug/-/plug-0.6.2.tgz#0183210919455db32ef46dfb7e68ee76095135c6"
+  integrity sha512-lR1ADoYKzvKw1h5z5qTJDvsBwrYOHIbMXLut/reR3aXBL1rW5F0WertrTdya0XZ9LNm3aubaeSgEYBJdLo8R3w==
+  dependencies:
+    "@croct/sdk" "^0.4"
+    tslib "^2.0.1"
+
+"@croct/sdk@^0.4", "@croct/sdk@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@croct/sdk/-/sdk-0.4.0.tgz#71d1a7daf4601db393f35b08e7195a3b172da8e1"
+  integrity sha512-oZfnchq/QYjkJkoBSbMIjCd5HvyG2rcGsb4kHX6pEf+UrGse0ZZXfCuL1CqUunWCHzZppowa6b7okajo+Mnwrg==
+  dependencies:
+    tslib "^2.0.0"
+
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -4749,6 +4764,11 @@ tslib@^1.9.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
+
+tslib@^2.0.0, tslib@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
+  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
 tty-browserify@0.0.0:
   version "0.0.0"
