@@ -10,30 +10,31 @@ interface CroctComponentProps {
 
 const CroctComponent: React.FC<CroctComponentProps> = ({ setPage }) => {
   const [userReturning, setUserReturning] = useState(false);
-  const [userAge, setUserAge] = useState(0);
   const [loading, setLoading] = useState(true);
   const [github, setGitHub] = useState(false);
   const [linkedin, setLinkedin] = useState(false);
-  const origins = ["linkedin", "github"];
-  const origin = { linkedin: false, github: false };
 
   croct.plug({ appId: "00000000-0000-0000-0000-000000000000" });
 
   useEffect(() => {
+    // CHECK IF USER IS RETURNING //
     croct
       .evaluate("user is returning")
       .then((returning) => setUserReturning(Boolean(returning)));
-    croct.evaluate("user's age").then((age) => setUserAge(Number(age)));
 
+    // CHECK ACCESS ORIGIN //
     croct.evaluate("page's referrer").then((url) => {
+      // If URL contains 'github' //
       const a = String(url).search("github");
       if (a >= 0) {
         setGitHub(true);
       }
+      // If URL contains 'linkedin' //
       const b = String(url).search("linkedin");
       if (b >= 0) {
         setLinkedin(true);
       }
+      // Loading state turns off //
       setLoading(false);
     });
   }, []);
@@ -42,11 +43,12 @@ const CroctComponent: React.FC<CroctComponentProps> = ({ setPage }) => {
     setPage(page);
   }
 
+  // If component's still loading //
   if (loading) return <div className="hidden">Loading</div>;
 
   return (
     <Container>
-      {/* User's Origin GitHub */}
+      {/* If User's Origin is GitHub */}
       {github && (
         <>
           <div className="origin-interaction">
@@ -56,6 +58,7 @@ const CroctComponent: React.FC<CroctComponentProps> = ({ setPage }) => {
           <button onClick={() => handleAction("contact")}>
             Get in touch today!
           </button>
+          {/* if user is returning */}
           {userReturning && (
             <div style={{ textAlign: "center" }}>
               Don't miss the chance again...
@@ -63,7 +66,7 @@ const CroctComponent: React.FC<CroctComponentProps> = ({ setPage }) => {
           )}
         </>
       )}
-      {/* User's Origin LinkedIn */}
+      {/* If User's Origin is LinkedIn */}
       {linkedin && (
         <>
           <div className="origin-interaction">
@@ -72,6 +75,7 @@ const CroctComponent: React.FC<CroctComponentProps> = ({ setPage }) => {
             <b>Let me show</b> you a little bit more about me!
           </div>
           <button onClick={() => handleAction("about")}>Start the tour!</button>
+          {/* if user is returning */}
           {userReturning && (
             <div style={{ textAlign: "center" }}>
               Don't miss the chance again...
