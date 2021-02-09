@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 import { Container, Wrapper } from "./styles";
 
@@ -31,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ pageName }) => {
       <Wrapper fullHeight={minHeader} module={module}>
         {module === "home" && (
           <div className="header">
-            <img src="/img/me.jpg" alt="avatar" />
+            <Image width={220} height={220} src="/img/me.jpg" alt="avatar" />
             <div className="animation">
               <h1>
                 <span>Developer</span>

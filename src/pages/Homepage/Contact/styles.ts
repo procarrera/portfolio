@@ -15,6 +15,7 @@ const focusIn = keyframes`
 
 
 export const Container = styled.div`
+
     width: 100%;
     background: rgb(6, 33 , 50, 0.5);
 
@@ -29,6 +30,10 @@ export const Container = styled.div`
     color: #fff;
 
     animation: ${focusIn} 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+    img {
+        border-radius: 50%;
+    }
 
     p:first-child {
         font-weight: bold;

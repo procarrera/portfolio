@@ -8,7 +8,10 @@ export default function App({ Component, pageProps }) {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-ETV4CFCTY4"
         />
-
+        <script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
