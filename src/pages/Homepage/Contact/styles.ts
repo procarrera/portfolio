@@ -35,6 +35,24 @@ export const Container = styled.div`
         border-radius: 50%;
     }
 
+    .meeting {
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid white;
+        font-size: 14px;
+        background: rgba(196,196,196,0.1);
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background ease-in 0.3s;
+    }
+
+    .meeting:hover{
+        background: rgba(196,196,196,0.3);
+    }
+
     p:first-child {
         font-weight: bold;
         line-height: 160%;

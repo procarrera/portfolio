@@ -11,18 +11,33 @@ const Contact: React.FC = () => {
         <br />I will love to hear from you :)
       </p>
       <a
+        className="meeting"
         href="https://calendly.com/procarrera/15min"
         style={{
-          padding: "16px",
-          borderRadius: "8px",
-          border: "1px solid white",
-          fontSize: "14px",
-          background: "rgba(196,196,196,0.1)",
-          color: "white",
+
         }}
       >
-        Set up a meeting today!
+        <Image src="/img/google-meet.svg" width={55} height={55}/>
+        <span style={{marginLeft: "8px"}}>set up a meeting!</span>
       </a>
+      <p
+        style={{
+          fontSize: "12px",
+        }}
+      >
+        -- or --
+      </p>
+      <div className="social">
+        <a href="https://github.com/procarrera">
+          <img src="/img/github.svg" alt="" />
+        </a>
+        <a href="https://twitter.com/procarrera_">
+          <img src="/img/twitter.svg" alt="" />
+        </a>
+        <a href="https://wa.me/5521986816996">
+          <img src="/img/whatsapp.svg" alt="" />
+        </a>
+      </div>
       <p style={{ lineHeight: "140%", fontSize: "20px", marginTop: "38px" }}>
         Developed by
         <br />
